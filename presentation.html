@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Lecture 1. Introduction to MATLAB</title>
+<meta name="author" content="(tae)"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css"/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/black.css" id="theme"/>
+
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'https://cdn.jsdelivr.net/npm/reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h1 class="title">Lecture 1. Introduction to MATLAB</h1><h2 class="author">tae</h2><p class="date">Created: 2020-12-31 Thu 21:25</p>
+</section>
+
+<section>
+<section id="slide-org10eb6b9">
+<h2 id="org10eb6b9">Instructor</h2>
+<ul>
+<li>Tae Eun Kim, Senior Lecturer</li>
+<li>B.S. in economics and mathematics (Northwestern University)</li>
+<li>Ph.D. in mathematics (The Ohio State University)</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-orgd43e209">
+<h2 id="orgd43e209">Math 3607</h2>
+<p>
+Beginning Scientific Computing
+</p>
+<ul>
+<li>Introduction to MATLAB: CS class</li>
+<li>Introduction to Numerical Analysis: math class
+<ul>
+<li>lots of linear algebra (matrices, vector spaces, etc.)</li>
+
+</ul></li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org5cec0e7">
+<h2 id="org5cec0e7">Assignments</h2>
+<div class="outline-text-2" id="text-org5cec0e7">
+</div>
+</section>
+<section id="slide-orge4814c0">
+<h3 id="orge4814c0">Weekly Homework (matlab programming + mathematical questions)</h3>
+<ul>
+<li>numerical calculation and confirmation using MATLAB</li>
+<li>graphical representation</li>
+<li><p>
+analysis to be done by hand and, at times, simple proofs at the level of undergraduate linear algebra or calculus
+</p>
+<aside class="notes">
+<p>
+Enter speaker notes here.
+</p>
+
+</aside></li>
+
+</ul>
+
+</section>
+<section id="slide-orgb41a824">
+<h3 id="orgb41a824">Weekly Responses</h3>
+<ul>
+<li>Carmen quizzes to check understanding of key concepts and techniques</li>
+<li>feedback to learning experience</li>
+<li>communication channel</li>
+
+</ul>
+</section>
+</section>
+<section>
+<section id="slide-orgce591d2" data-background="./img/Blackboard-1.jpg" data-background-size="1600x900px" data-background-transition="slide">
+<h2 id="orgce591d2">Image</h2>
+
+</section>
+</section>
+<section>
+<section id="slide-org9596136">
+<h2 id="org9596136">Math</h2>
+<p>
+Let \(n \in \mathbb{N}\). Then
+\[
+\sum_{k=1}^{n} k^2 = 1^2 + 2^2 + \cdots + n^2 = \frac{n (n+1) (2n+1)}{6}.
+\]
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org1efcf09">
+<h2 id="org1efcf09">Code</h2>
+<div class="org-src-container">
+
+<pre  class="src src-matlab"><code trim>t = linspace(0, 1, 361);
+z = exp(2<span style="color: #81A1C1;">i</span><span style="color: #8FBCBB;">*</span><span style="color: #81A1C1;">pi</span><span style="color: #8FBCBB;">*</span>t);
+plot(real(z), imag(z));
+
+<span style="color: #81A1C1;">for</span> <span style="color: #81A1C1;">j</span> = <span style="color: #81A1C1;">1:length(t)</span>
+    disp([<span style="color: #A3BE8C;">'j = '</span>, num2str(<span style="color: #81A1C1;">j</span>)]);
+<span style="color: #81A1C1;">end</span>
+</code></pre>
+</div>
+</section>
+</section>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+multiplex: {
+    secret: '', // null if client
+    id: '', // id, obtained from socket.io server
+    url: '' // Location of socket.io server
+},
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+});
+</script>
+</body>
+</html>
