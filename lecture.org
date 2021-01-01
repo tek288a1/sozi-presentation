@@ -1,0 +1,29 @@
+#+TITLE: My Lecture
+
+* Slide 1
+  This is slide 1.
+
+* Slide 2
+  Here is some math:
+  \[
+  \int_{0}^{\infty} e^{-x^2/2} \; dx.
+  \]
+
+* Slide 3
+#+ATTR_REVEAL: :frag (roll-in)
+   - item 1
+   - item 2
+   - item 3
+
+* Images
+  :PROPERTIES:
+:reveal_background: ./img/out.png
+:reveal_background_size: 1600x900px
+:reveal_background_trans: slide
+:END:
+
+* Code
+  #+BEGIN_SRC matlab
+    theta = linspace(0, 2*pi, 361);
+    z = exp(1i*theta);
+  #+END_SRC

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Org-Mode Export to Reveal.js</title>
+<meta name="author" content="(tae)"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css"/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/moon.css" id="theme"/>
+
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'https://cdn.jsdelivr.net/npm/reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h1 class="title">Org-Mode Export to Reveal.js</h1><h2 class="author">tae</h2><p class="date">Created: 2020-12-27 Sun 03:33</p>
+</section>
+<section>
+<section id="slide-orgbf96a52">
+<h2 id="orgbf96a52">Mark-up</h2>
+<p>
+This is an <b>important concept</b> to remember.
+</p>
+<ul>
+<li><i>italic</i></li>
+<li><code>typewriter</code></li>
+<li><span class="underline">underline</span></li>
+<li><del>strikethrough</del></li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-org9e3c25e">
+<h2 id="org9e3c25e">Math</h2>
+<p>
+For each \(j \in \mathbb{N}[1,m]\), note that
+\[
+A \mathbf{e}_j = \mathbf{a}_j.
+\]
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org97f531f">
+<h2 id="org97f531f">Code</h2>
+<div class="org-src-container">
+
+<pre  class="src src-shell"><code trim><span style="color: #81A1C1;">echo</span> <span style="color: #A3BE8C;">"hello world"</span> &gt;&gt; test.txt
+awk <span style="color: #A3BE8C;">'{ print $2 }'</span>
+</code></pre>
+</div>
+</section>
+</section>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+multiplex: {
+    secret: '', // null if client
+    id: '', // id, obtained from socket.io server
+    url: '' // Location of socket.io server
+},
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+});
+</script>
+</body>
+</html>

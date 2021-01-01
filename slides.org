@@ -1,0 +1,20 @@
+#+OPTIONS: num:nil toc:nil
+#+TITLE: Org-Mode Export to Reveal.js
+* Mark-up
+This is an *important concept* to remember.
+ - /italic/
+ - =typewriter=
+ - _underline_
+ - +strikethrough+
+
+* Math
+For each $j \in \mathbb{N}[1,m]$, note that
+\[
+A \mathbf{e}_j = \mathbf{a}_j.
+\]
+
+* Code
+#+BEGIN_SRC shell
+echo "hello world" >> test.txt
+awk '{ print $2 }'
+#+END_SRC

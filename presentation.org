@@ -1,0 +1,53 @@
+#+STARTUP: indent
+#+OPTIONS: num:nil toc:nil
+#+REVEAL_TRANS: linear
+#+REVEAL_THEME: black
+#+TITLE: Lecture 1. Introduction to MATLAB
+
+* Instructor
+  - Tae Eun Kim, Senior Lecturer
+  - B.S. in economics and mathematics (Northwestern University)
+  - Ph.D. in mathematics (The Ohio State University)
+
+* Math 3607
+  Beginning Scientific Computing
+  - Introduction to MATLAB: CS class
+  - Introduction to Numerical Analysis: math class
+    - lots of linear algebra (matrices, vector spaces, etc.)
+
+* Assignments
+** Weekly Homework (matlab programming + mathematical questions)
+   - numerical calculation and confirmation using MATLAB
+   - graphical representation
+   - analysis to be done by hand and, at times, simple proofs at the level of undergraduate linear algebra or calculus
+     #+BEGIN_NOTES
+     Enter speaker notes here.
+     #+END_NOTES
+
+** Weekly Responses
+   - Carmen quizzes to check understanding of key concepts and techniques
+   - feedback to learning experience
+   - communication channel
+* Image
+:PROPERTIES:
+:reveal_background: ./img/Blackboard-1.jpg
+:reveal_background_size: 1600x900px
+:reveal_background_trans: slide
+:END:
+
+* Math
+Let $n \in \mathbb{N}$. Then
+\[
+\sum_{k=1}^{n} k^2 = 1^2 + 2^2 + \cdots + n^2 = \frac{n (n+1) (2n+1)}{6}.
+\]
+
+* Code
+#+BEGIN_SRC matlab
+  t = linspace(0, 1, 361);
+  z = exp(2i*pi*t);
+  plot(real(z), imag(z));
+
+  for j = 1:length(t)
+      disp(['j = ', num2str(j)]);
+  end
+#+END_SRC

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>My Lecture</title>
+<meta name="author" content="(tae)"/>
+<style type="text/css">
+.underline { text-decoration: underline; }
+</style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.css"/>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reveal.js/dist/theme/moon.css" id="theme"/>
+
+
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+    if( window.location.search.match( /print-pdf/gi ) ) {
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = 'https://cdn.jsdelivr.net/npm/reveal.js/css/print/pdf.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    }
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div class="reveal">
+<div class="slides">
+<section id="sec-title-slide"><h1 class="title">My Lecture</h1><h2 class="author">tae</h2><p class="date">Created: 2020-12-31 Thu 21:24</p>
+</section>
+<section id="table-of-contents"><div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#/slide-org50a8b94">1. Slide 1</a></li>
+<li><a href="#/slide-org7058f52">2. Slide 2</a></li>
+<li><a href="#/slide-orga688f1f">3. Slide 3</a></li>
+<li><a href="#/slide-orga274d4b">4. Images</a></li>
+<li><a href="#/slide-org6075c92">5. Code</a></li>
+</ul>
+</div>
+</div>
+</section>
+
+<section>
+<section id="slide-org50a8b94">
+<h2 id="org50a8b94"><span class="section-number-2">1</span> Slide 1</h2>
+<p>
+This is slide 1.
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-org7058f52">
+<h2 id="org7058f52"><span class="section-number-2">2</span> Slide 2</h2>
+<p>
+Here is some math:
+\[
+  \int_{0}^{\infty} e^{-x^2/2} \; dx.
+  \]
+</p>
+
+</section>
+</section>
+<section>
+<section id="slide-orga688f1f">
+<h2 id="orga688f1f"><span class="section-number-2">3</span> Slide 3</h2>
+<ul>
+<li class="fragment roll-in">item 1</li>
+<li class="fragment roll-in">item 2</li>
+<li class="fragment roll-in">item 3</li>
+
+</ul>
+
+</section>
+</section>
+<section>
+<section id="slide-orga274d4b" data-background="./img/out.png" data-background-size="1600x900px" data-background-transition="slide">
+<h2 id="orga274d4b"><span class="section-number-2">4</span> Images</h2>
+
+</section>
+</section>
+<section>
+<section id="slide-org6075c92">
+<h2 id="org6075c92"><span class="section-number-2">5</span> Code</h2>
+<div class="org-src-container">
+
+<pre  class="src src-matlab"><code trim>theta = linspace(0, 2<span style="color: #8FBCBB;">*</span><span style="color: #81A1C1;">pi</span>, 361);
+z = exp(1<span style="color: #81A1C1;">i</span><span style="color: #8FBCBB;">*</span>theta);
+</code></pre>
+</div>
+</section>
+</section>
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/reveal.js/dist/reveal.js"></script>
+
+<script>
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+multiplex: {
+    secret: '', // null if client
+    id: '', // id, obtained from socket.io server
+    url: '' // Location of socket.io server
+},
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+ { src: 'https://cdn.jsdelivr.net/npm/reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }]
+});
+</script>
+</body>
+</html>
